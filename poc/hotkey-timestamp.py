@@ -1,3 +1,19 @@
+#!/usr/bin/env python3
+"""
+MPV Timestamp Hotkey Script
+Adds F10 hotkey to MPV that prints current timestamp when pressed.
+
+TODO
+Need this because, I must be able to press a hotkey, and,
+get the current timestamp to START recording audio, and again to END recording audio.
+
+TODO
+I also must press hotkey to grab a screenshot.
+
+TODO
+I must also get the subtitles going
+"""
+
 import os
 os.environ["PATH"] = r"C:\Users\rlm\Downloads\mpv-x86_64-20250720-git-440f35a" + os.pathsep + os.environ["PATH"]
 
@@ -20,18 +36,3 @@ def on_j():
 player.play(VIDEO_PATH)
 
 player.wait_for_playback()
-
-
-# Press K to mark the end of a subtitle. Splits the subtitle in two, 
-# donating the end piece to the next subtitles.
-
-# TODO: User can press <something> to ... retry? try again? what UI?
-
-# The fixer adjusts the timestamps up to and including the spike. Saves edits. Merges into main SRT.
-
-# SRT has:
-#   - original file, never changes, read-only.
-#   - segment file, the SRT of the segment.
-#   - Updated file, where changes are merged into.
-
-# GOAL: I'd like to be able to use this on LOST! And Soon!
