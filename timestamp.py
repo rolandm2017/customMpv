@@ -2,7 +2,7 @@ from python_mpv_jsonipc import MPV
 import asyncio
 
 # === CONFIGURATION ===
-MPV_PATH = r"C:\Users\rlm\Downloads\mpv-x86_64-20250720-git-440f35a\mpv.exe"  # <= replace with your actual mpv.exe path
+MPV_PATH = r"C:\mpv-x86_64\mpv.exe"  # <= replace with your actual mpv.exe path
 VIDEO_PATH = r"C:\Users\rlm\Videos\hazy\Hazy - Awake.webm"  # <= replace with your video
 
 # === SCRIPT ===
