@@ -143,7 +143,7 @@ class MPVScreenshotCapture:
         print("Press the hotkey while MPV is playing to capture screenshots")
         print("Press Ctrl+C to exit")
         
-        keyboard.add_hotkey(self.hotkey, self.take_screenshot)
+        # keyboard.add_hotkey(self.hotkey, self.take_screenshot)
     
     def run(self):
         """Main execution loop"""
@@ -177,20 +177,20 @@ class MPVScreenshotCapture:
             #         pass
             exit()
             
-    def cleanup(self):
-        """Clean up resources"""
-        if hasattr(self, 'hotkey_hook') and self.hotkey_hook:
-            try:
-                keyboard.remove_hotkey(self.hotkey_hook)
-                print("✓ Hotkey unregistered")
-            except:
-                pass
+    # def cleanup(self):
+    #     """Clean up resources"""
+    #     if hasattr(self, 'hotkey_hook') and self.hotkey_hook:
+    #         try:
+    #             # keyboard.remove_hotkey(self.hotkey_hook)
+    #             print("✓ Hotkey unregistered")
+    #         except:
+    #             pass
         
-        # Clear all keyboard hooks as a fallback
-        try:
-            keyboard.unhook_all()
-        except:
-            pass
+    #     # Clear all keyboard hooks as a fallback
+    #     try:
+    #         keyboard.unhook_all()
+    #     except:
+    #         pass
 
 
 
